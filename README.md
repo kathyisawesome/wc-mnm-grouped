@@ -8,7 +8,6 @@ The Mix and Match products appear as options in a loop when viewing the Grouped 
 
 ![Screen Recording of a grouped mix and match product. When the 6 pack thumbnail is clicked, the options for that product appear.](https://user-images.githubusercontent.com/507025/92426124-5425f580-f146-11ea-9d41-623107fb518c.gif)
 
-
 ### Set up
 
 1. Create a new product, and select the "Grouped Mix and Match" type from the product type dropdown selector. 
