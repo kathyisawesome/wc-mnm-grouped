@@ -455,8 +455,8 @@ function get_plugin_path() {
 add_action( 'woocommerce_mnm_loaded', __NAMESPACE__ . '\init' );
 
 
-register_activation_hook( __FILE__, __NAMESPACE__ . 'plugin_activate' );
-register_uninstall_hook( __FILE__, __NAMESPACE__ . 'plugin_uninstall' );
+register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activate' );
+register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );
 
 
 /**
