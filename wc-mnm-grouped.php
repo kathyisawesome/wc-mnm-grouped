@@ -8,7 +8,7 @@
  * Author URI: http://kathyisawesome.com/
  * Developer: Kathy Darling
  * Developer URI: http://kathyisawesome.com/
- * Text Domain: wc-mnm-select-layout
+ * Text Domain: wc-mnm-grouped
  * Domain Path: /languages
  *
  * Copyright: © 2020 Kathy Darling
