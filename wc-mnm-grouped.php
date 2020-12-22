@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Mix and Match -  Grouped Containers
  * Plugin URI: http://www.woocommerce.com/products/wc-mnm-grouped/
  * Description: Group multiple Mix and Match products together to approximate variations
- * Version: 1.0.0-beta-1
+ * Version: 1.0.0-beta-2
  * Author: Kathy Darling
  * Author URI: http://kathyisawesome.com/
  * Developer: Kathy Darling
@@ -15,12 +15,9 @@
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
-
-
-
 namespace WC_MNM_Grouped;
 
-define( 'WC_MNM_GROUPED_VERSION', '1.0.0' );
+define( 'WC_MNM_GROUPED_VERSION', '1.0.0-beta-2' );
 
 /**
  * WC_MNM_Grouped Constructor
