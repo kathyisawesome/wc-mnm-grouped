@@ -66,7 +66,7 @@
       grouped.$selector.data('current_selection', product_id);
 
       $.ajax( {
-          url: wc_add_to_cart_params.wc_ajax_url.toString().replace( '%%endpoint%%', 'get_mix_and_match' ),
+          url: WC_MNM_GROUPED_PARAMS.wc_ajax_url.toString().replace( '%%endpoint%%', 'get_mix_and_match' ),
           type: 'POST',
           data: { 
             product_id: product_id,

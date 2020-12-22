@@ -331,6 +331,11 @@ function load_scripts() {
 	wp_enqueue_script( 'jquery-blockui' );
 	wp_enqueue_script( 'wc-add-to-cart-mnm' );
 	wp_enqueue_script( 'wc-mnm-grouped' );
+
+	$l10n = array( 'wc_ajax_url' => \WC_AJAX::get_endpoint( '%%endpoint%%' ) );
+
+	wp_localize_script( 'wc-mnm-grouped', 'WC_MNM_GROUPED_PARAMS', $l10n );
+
 }
 
 
