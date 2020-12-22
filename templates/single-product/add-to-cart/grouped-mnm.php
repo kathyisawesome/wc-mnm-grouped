@@ -37,6 +37,8 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 	
 	<?php if ( ! empty( $grouped_products ) ) : ?> 
 
+		<div class="wc-grouped-mnm-selector">
+
 		<?php woocommerce_product_loop_start(); ?>
 
 		<?php foreach ( $grouped_products as $grouped_product ) : ?>
@@ -52,6 +54,8 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 		<?php endforeach; ?>
 
 		<?php woocommerce_product_loop_end(); ?>
+
+		</div>
 
 		<?php wp_reset_postdata(); ?>
 

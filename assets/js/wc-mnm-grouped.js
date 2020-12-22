@@ -10,7 +10,7 @@
     var grouped = this;
 
     this.$wrapper  = $wrapper;
-    this.$selector = $wrapper.find( 'ul.products' );
+    this.$selector = $wrapper.find( '.wc-grouped-mnm-selector > ul.products' );
     this.$result   = $wrapper.find( '.wc-grouped-mnm-result' );
 
     /**

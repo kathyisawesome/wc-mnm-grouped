@@ -304,7 +304,7 @@ function remove_filters() {
 function print_styles() { ?>
 
 	<style>
-		.wc-grouped-mnm-wrapper.has-selection ul.products .product:not(.selected) {
+		.wc-grouped-mnm-wrapper.has-selection .wc-grouped-mnm-selector .product:not(.selected) {
 			opacity: .5;
 		}
 	</style>
