@@ -468,6 +468,11 @@ register_uninstall_hook( __FILE__, __NAMESPACE__ . '\plugin_uninstall' );
  * Flush rewrite rules on activation.
  */
 function plugin_activate() {
+
+	// If grouped type does not exist, create it.
+	if ( is_null( get_term_by( 'slug', 'grouped-mnm', 'product_type' ) ) ) {
+		wp_insert_term( __( 'Grouped Mix and Match product', 'wc-mnm-grouped' ), 'product_type', array( 'slug' => 'grouped-mnm' ) );
+	}
 	rewrite_endpoint();
 	flush_rewrite_rules();
 }
