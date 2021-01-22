@@ -71,8 +71,6 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 
 	<?php endif; ?>
 
-
-	</div>
 </div>
 
 <?php 
