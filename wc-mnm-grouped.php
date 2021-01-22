@@ -129,7 +129,18 @@ function product_options() {
 	<div class="options_group show_if_grouped-mnm">
 		<p class="form-field">
 			<label for="grouped_mnm_products"><?php esc_html_e( 'Grouped Mix and Match products', 'wc-mnm-grouped' ); ?></label>
-			<select class="wc-product-search" multiple="multiple" style="width: 50%;" id="grouped_mnm_products" name="grouped_mnm_products[]" data-sortable="true" data-placeholder="<?php esc_attr_e( 'Search for a Mix and Match product&hellip;', 'wc-mnm-grouped' ); ?>" data-action="woocommerce_json_search_products" data-exclude="<?php echo intval( $post->ID ); ?>" data-exclude_type="<?php echo esc_attr( join( ",", $product_types ) );?>" >
+
+			<select class="wc-product-search"
+				multiple="multiple"
+				style="width: 50%;"
+				id="grouped_mnm_products"
+				name="grouped_mnm_products[]"
+				data-sortable="true"
+				data-placeholder="<?php esc_attr_e( 'Search for a Mix and Match product&hellip;', 'wc-mnm-grouped' ); ?>"
+				data-action="woocommerce_json_search_products"
+				data-exclude="<?php echo intval( $post->ID ); ?>"
+				data-exclude_type="<?php echo esc_attr( join( ",", $product_types ) );?>"
+			>
 				<?php
 				$product_ids = $product_object->is_type( 'grouped-mnm' ) ? $product_object->get_children( 'edit' ) : array();
 
