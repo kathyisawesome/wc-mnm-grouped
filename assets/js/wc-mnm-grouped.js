@@ -30,8 +30,8 @@
      * Events.
      */
     this.bind_event_handlers = function() {
-      this.$selector.on( 'click', ' .woocommerce-loop-product__link', this.loadAjax );
-      this.$selector.on( 'click', ' .add_to_cart_button', this.loadAjax );
+      this.$selector.on( 'click', '.woocommerce-loop-product__link', this.loadAjax );
+      this.$selector.on( 'click', '.add_to_cart_button', this.loadAjax );
     };
 
     /**
