@@ -14,7 +14,7 @@
  * @author  Kathy Darling
  * @package WooCommerce Mix and Match/Templates
  * @since   1.0.0
- * @version 1.8.0
+ * @version 1.0.0-beta-3
  */
 
 namespace WC_MNM_Grouped;
