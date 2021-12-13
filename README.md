@@ -24,3 +24,7 @@ The Mix and Match products appear as options in a loop when viewing the Grouped 
 
 1. This is available as is and does not receive _priority_ support.
 2. This requires [Mix and Match]( https://woocommerce.com/products/woocommerce-mix-and-match-products ) 1.10.0+
+
+### Automatic plugin updates
+
+Plugin updates can be enabled by installing the [Git Updater](https://git-updater.com/) plugin.
