@@ -254,7 +254,7 @@ function loop_product_link_open() {
 
 	$classes = (array) apply_filters( 'wc_mnm_grouped_selector_loop_classes', array( 'woocommerce-LoopProduct-link', 'woocommerce-loop-product__link' ), $product );
 	
-	echo '<a href="' . esc_url( $link ) . '" data-product_id="' . esc_attr( $product->get_id() ) . '" class="' . esc_attr( implode( $classes, ' ' ) )    . '">';
+	echo '<a href="' . esc_url( $link ) . '" data-product_id="' . esc_attr( $product->get_id() ) . '" class="' . esc_attr( implode( ' ', $classes ) )    . '">';
 }
 
 
