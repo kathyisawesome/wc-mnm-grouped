@@ -361,12 +361,17 @@ function get_mix_and_match() {
 
 	if ( isset( $_POST['product_id'] ) ) {
 
-		$html = get_mix_and_match_template_html( intval( $_POST['product_id'] ) );
+        $product = wc_get_product( intval( $_POST['product_id'] ) );
 
-		$response = array(
-					'result' => 'success',
-					'html'   => $html,
-				);
+        if ( $product && $product->is_type( 'mix-and-match' ) ) {
+
+            $form = get_mix_and_match_template_html( $product );
+
+            $response = array(
+                'result' => 'success',
+                'fragments' => apply_filters( 'wc_mnm_grouped_add_to_cart_fragments', array( 'div.wc-grouped-mnm-result'   => $form ), $product ),
+            );
+        }
 
 	}
 	
@@ -377,25 +382,31 @@ function get_mix_and_match() {
 /**
  * Return the specific MNM template
  *
- * @param  int $product_id
+ * @param  mixed int|WC_Product $container
  * @return string
  */
-function get_mix_and_match_template_html( $product_id ) {
+function get_mix_and_match_template_html( $container ) {
+    
+    if ( is_numeric( $container ) ) {
+        $container = wc_get_product( intval( $container ) );
+    }
 
 	$html = '';
 
+    // Swap the global product for this specific container.
 	global $product;
 	$backup_product = $product;
-
-	$product = wc_get_product( intval( $product_id ) );
-
+    $product = $container;
+	
 	if ( $product && $product->is_type( 'mix-and-match' ) ) {
 
 		add_filter( 'woocommerce_get_product_add_to_cart_form_location', __NAMESPACE__ . '\force_form_location' );
 		
 		ob_start();
+        echo '<div class="wc-grouped-mnm-result">'; // Restore wrapping class as fragments replaces it.
 		echo '<h2>' . esc_html__( 'Select options', 'wc-grouped-mnm' ) . '</h2>';
 		do_action( 'woocommerce_mix-and-match_add_to_cart' );
+        echo '</div>';
 		$html = ob_get_clean();
 
 		add_filter( 'woocommerce_get_product_add_to_cart_form_location', __NAMESPACE__ . '\force_form_location' );
