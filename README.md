@@ -1,5 +1,7 @@
 # WooCommerce Mix and Match: Grouped Containers
 
+[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest/download/wc-mnm-grouped.zip)
+
 ### What's This?
 
 Mini-extension for that adds a "Grouped Mix and Match" [WooCommerce Mix and Match](https://woocommerce.com/products/woocommerce-mix-and-match-products ). This product type groups multiple WooCommerce Mix and Match products together to allow customers to choose from different size containers before making their selections.
