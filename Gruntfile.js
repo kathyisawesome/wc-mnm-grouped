@@ -150,8 +150,7 @@ module.exports = function(grunt) {
 		// Add text domain
 		addtextdomain: {
 			options: {
-				textdomain: '<%= pkg.name %>',    // Project text domain.
-				updateDomains: [ 'woocommerce-mix-and-match', 'woocommerce-product-bundles', 'woocommerce-mix-and-match-min-max-quantities', 'woocommerce' ]  // List of text domains to replace.
+				textdomain: '<%= pkg.name %>'    // Project text domain.
 			},
 			target: {
 				files: {
@@ -235,7 +234,7 @@ module.exports = function(grunt) {
         ]
     );
 
-	grunt.registerTask( 'build', [ 'replace', 'js', 'addtextdomain', 'makepot' ] );
-	grunt.registerTask( 'release', [ 'build', 'zip', 'clean' ] );
+	grunt.registerTask( 'build', [ 'replace', 'js' ] );
+	grunt.registerTask( 'release', [ 'build', 'addtextdomain', 'makepot', 'zip', 'clean' ] );
 
 };
