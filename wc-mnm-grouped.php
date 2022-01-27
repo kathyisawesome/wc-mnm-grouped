@@ -404,7 +404,7 @@ function get_mix_and_match_template_html( $container ) {
 		
 		ob_start();
         echo '<div class="wc-grouped-mnm-result">'; // Restore wrapping class as fragments replaces it.
-		echo '<h2>' . esc_html__( 'Select options', 'wc-grouped-mnm' ) . '</h2>';
+		echo '<h2>' . esc_html__( 'Select options', 'wc-mnm-grouped' ) . '</h2>';
 		do_action( 'woocommerce_mix-and-match_add_to_cart' );
         echo '</div>';
 		$html = ob_get_clean();
@@ -444,7 +444,7 @@ function force_form_location( $value ) {
 function cart_item_name_in_quotes( $name, $product_id ) {
 	if( isset( $_REQUEST['grouped_mnm_id'] ) ) {
 		/* translators: %1$s grouped parent product name %2$s: product name  */
-		$name = sprintf( _x( '&ldquo;%1$s &mdash; %2$s&rdquo;', 'Item name in quotes', 'wc-grouped-mnm' ), strip_tags( get_the_title( intval( $_REQUEST['grouped_mnm_id'] ) ) ), strip_tags( get_the_title( $product_id ) ) );
+		$name = sprintf( _x( '&ldquo;%1$s &mdash; %2$s&rdquo;', 'Item name in quotes', 'wc-mnm-grouped' ), strip_tags( get_the_title( intval( $_REQUEST['grouped_mnm_id'] ) ) ), strip_tags( get_the_title( $product_id ) ) );
 	}
 	return $name;
 }

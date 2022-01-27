@@ -66,7 +66,7 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 	<?php else: ?>
 
 		<div class="mnm_message woocommerce-info">
-			 <?php esc_html_e( 'No related Mix and Match products', 'wc-grouped-mnm' ); ?>
+			 <?php esc_html_e( 'No related Mix and Match products', 'wc-mnm-grouped' ); ?>
 		</div>
 
 	<?php endif; ?>
