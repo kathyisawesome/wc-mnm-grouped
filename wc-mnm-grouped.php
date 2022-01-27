@@ -329,7 +329,8 @@ function print_styles() { ?>
  * @return void
  */
 function register_scripts() {
-	wp_register_script( 'wc-mnm-grouped', get_plugin_url() . '/assets/js/wc-mnm-grouped.js', array( 'wc-add-to-cart-mnm', 'jquery-blockui' ), WC_MNM_GROUPED_VERSION, true );
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	wp_register_script( 'wc-mnm-grouped', get_plugin_url() . '/assets/js/frontend/wc-mnm-grouped' . $suffix . '.js', array( 'wc-add-to-cart-mnm', 'jquery-blockui' ), WC_MNM_GROUPED_VERSION, true );
 }
 
 /**
