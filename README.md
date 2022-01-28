@@ -1,6 +1,10 @@
 # WooCommerce Mix and Match: Grouped Containers
 
-[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest/download/wc-mnm-grouped.zip)
+### Quickstart
+
+This is a developmental repo. Clone this repo and run `npm install && npm run build`   
+OR    
+[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest/download/wc-mnm-grouped.zip)    
 
 ### What's This?
 
