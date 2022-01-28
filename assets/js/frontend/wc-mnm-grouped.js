@@ -112,24 +112,24 @@
 
     this.updateUrl = function( product_id ) {
       
-      let url = window.location.href;
+      var url = window.location.href;
 
-      let regex = /\/mnm\/([0-9]+)?/;
-      let found = url.match(regex);
+      var regex = /\/mnm\/([0-9]+)?/;
+      var found = url.match(regex);
 
       if ( found ) {
         url = url.replace(regex, '/mnm/' + product_id );
       } else {
-         url = url.replace(/\/$/, "") + '/mnm/' + product_id;
+         url = url.replace(/\/$/, '') + '/mnm/' + product_id;
       }
 
-      let state = {
-          mnm: product_id,
-      }
-      let title = product_id;
+      var state = {
+          mnm: product_id
+      };
+      var title = product_id;
 
       history.pushState(state, title, url);
-    }
+    };
 
 
     // Launch.
@@ -141,8 +141,8 @@
   /*  Initialization.                                                */
   /*-----------------------------------------------------------------*/
 
-  $( '.wc-grouped-mnm-wrapper' ).each( function(i) {
-    $grouped = new WC_MNM_Grouped( $(this) );
+  $( '.wc-grouped-mnm-wrapper' ).each( function() {
+    new WC_MNM_Grouped( $(this) );
   } );
 
 } ) ( jQuery );

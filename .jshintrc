@@ -25,6 +25,6 @@
 		"wc_mnm_params": false,
 		"wc_mnm_admin_order_params": false,
 		"woocommerce_admin_meta_boxes": false,
-		"WC_MNM_GROUPED_VERSION": false
+		"WC_MNM_GROUPED_PARAMS": false
 	}
 }
