@@ -6,8 +6,6 @@
  * Version: 1.0.0
  * Author: Kathy Darling
  * Author URI: http://kathyisawesome.com/
- * Developer: Kathy Darling
- * Developer URI: http://kathyisawesome.com/
  * Text Domain: wc-mnm-grouped
  * Domain Path: /languages
  * GitHub Plugin URI: kathyisawesome/wc-mnm-grouped
@@ -72,8 +70,6 @@ function init() {
 
 /**
  * Make the plugin translation ready
- *
- * @return void
  */
 function load_plugin_textdomain() {
 	\load_plugin_textdomain( 'wc-mnm-grouped' , false , dirname( plugin_basename( __FILE__ ) ) .  '/languages/' );
