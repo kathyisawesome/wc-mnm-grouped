@@ -234,7 +234,8 @@ module.exports = function(grunt) {
         ]
     );
 
-	grunt.registerTask( 'build', [ 'replace', 'js' ] );
-	grunt.registerTask( 'release', [ 'build', 'addtextdomain', 'makepot', 'zip', 'clean' ] );
+	grunt.registerTask( 'dev', [ 'replace', 'js' ] );
+	grunt.registerTask( 'build', [ 'dev', 'addtextdomain', 'makepot' ] );
+	grunt.registerTask( 'release', [ 'dev', 'zip', 'clean' ] );
 
 };
