@@ -1,2 +1,4 @@
-assets/js/frontend/wc-mnm-grouped.min.js
-languages/wc-mnm-grouped.pot
+assets/js/frontend/*.min.js
+assets/js/backend/*.min.js
+languages/
+package-lock.json
