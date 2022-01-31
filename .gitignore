@@ -1,4 +1,7 @@
+node_modules/
+build/
+deploy/
+package-lock.json
 assets/js/frontend/*.min.js
 assets/js/backend/*.min.js
 languages/
-package-lock.json
