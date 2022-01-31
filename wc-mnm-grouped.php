@@ -391,29 +391,21 @@ function get_mix_and_match_template_html( $container ) {
     }
 
 	$html = '';
-
-    // Swap the global product for this specific container.
-	global $product;
-	$backup_product = $product;
-    $product = $container;
 	
-	if ( $product && $product->is_type( 'mix-and-match' ) ) {
+	if ( $container && $container->is_type( 'mix-and-match' ) ) {
 
 		add_filter( 'woocommerce_get_product_add_to_cart_form_location', __NAMESPACE__ . '\force_form_location' );
 		
 		ob_start();
         echo '<div class="wc-grouped-mnm-result">'; // Restore wrapping class as fragments replaces it.
 		echo '<h2>' . esc_html__( 'Select options', 'wc-mnm-grouped' ) . '</h2>';
-		do_action( 'woocommerce_mix-and-match_add_to_cart' );
+		do_action( 'woocommerce_mix-and-match_add_to_cart', $container );
         echo '</div>';
 		$html = ob_get_clean();
 
 		add_filter( 'woocommerce_get_product_add_to_cart_form_location', __NAMESPACE__ . '\force_form_location' );
 
 	}
-
-	// Restore product object.
-	$product = $backup_product;
 	
 	return $html;
 }
