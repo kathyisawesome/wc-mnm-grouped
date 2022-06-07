@@ -4,8 +4,7 @@ module.exports = function(grunt) {
 	require( 'load-grunt-tasks' )( grunt );
 
 	// Project configuration.
-	grunt.initConfig(
-        {
+	grunt.initConfig( {
 		pkg: grunt.file.readJSON( 'package.json' ),
 
 		// Setting folder templates.
@@ -267,36 +266,39 @@ module.exports = function(grunt) {
 				],
 				overwrite: true,
 				replacements: [
-				{
-					from: /Stable tag:.*$/m,
-					to: "Stable tag: <%= pkg.version %>"
-				},
-				{
-					from: /Version:.*$/m,
-					to: "Version: <%= pkg.version %>"
-				},
-				{
-					from: /public \$version = \'.*.'/m,
-					to: "public $version = '<%= pkg.version %>'"
-				},
-				{
-					from: /public \$version = \'.*.'/m,
-					to: "public $version = '<%= pkg.version %>'"
-				},
-				{
-					from: /public static \$version = \'.*.'/m,
-					to: "public static $version = '<%= pkg.version %>'"
-				},
-				{
-					from: /const VERSION = \'.*.'/m,
-					to: "const VERSION = '<%= pkg.version %>'"
-				}
+					{
+						from: /Stable tag:.*$/m,
+						to: "Stable tag: <%= pkg.version %>"
+					},
+					{
+						from: /Version:.*$/m,
+						to: "Version: <%= pkg.version %>"
+					},
+					{
+						from: /public \$version = \'.*.'/m,
+						to: "public $version = '<%= pkg.version %>'"
+					},
+					{
+						from: /public \$version = \'.*.'/m,
+						to: "public $version = '<%= pkg.version %>'"
+					},
+					{
+						from: /public static \$version = \'.*.'/m,
+						to: "public static $version = '<%= pkg.version %>'"
+					},
+					{
+						from: /const VERSION = \'.*.'/m,
+						to: "const VERSION = '<%= pkg.version %>'"
+					},
+					{
+						from: /define\( 'WC_MNM_GROUPED_VERSION', .*$/m,
+						to: "define( 'WC_MNM_GROUPED_VERSION', '<%= pkg.version %>' );"
+					}
 				]
 			}
 		}
 
-        }
-    );
+    } );
 
 	// Register tasks.
 	grunt.registerTask(
