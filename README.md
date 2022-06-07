@@ -10,6 +10,8 @@ OR
 
 Mini-extension for that adds a "Grouped Mix and Match" [WooCommerce Mix and Match](https://woocommerce.com/products/woocommerce-mix-and-match-products ). This product type groups multiple WooCommerce Mix and Match products together to allow customers to choose from different size containers before making their selections.
 
+It should have probably been called "Variable" Mix and Match as it is meant to actually approximate a variable mix and match product with the different mix and match products as "variations".
+
 The Mix and Match products appear as options in a loop when viewing the Grouped product and when "Select Options" for one is clicked the related Mix and Match product loads and can be configured, then added to the cart. 
 
 ![Screen Recording of a grouped mix and match product. When the 6 pack thumbnail is clicked, the options for that product appear.](https://user-images.githubusercontent.com/507025/92426124-5425f580-f146-11ea-9d41-623107fb518c.gif)
