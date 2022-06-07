@@ -26,6 +26,11 @@ define( 'WC_MNM_GROUPED_VERSION', '1.0.0-rc-1' );
  */
 function init() {
 
+	// Quietly quit if MNM is not active.
+	if ( ! function_exists( 'wc_mix_and_match' ) ) {
+		return false;
+	}
+
 	// Product class.
 	require_once 'includes/class-wc-product-grouped-mnm.php';
 
@@ -468,7 +473,7 @@ function get_plugin_path() {
 /*-----------------------------------------------------------------------------------*/
 /* Launch the whole plugin. */
 /*-----------------------------------------------------------------------------------*/
-add_action( 'woocommerce_mnm_loaded', __NAMESPACE__ . '\init' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\init', 20 );
 
 
 register_activation_hook( __FILE__, __NAMESPACE__ . '\plugin_activate' );
