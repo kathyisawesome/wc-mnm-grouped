@@ -1,10 +1,15 @@
+> **Warning**
+> This project is archived. Please check out [Variable Mix and Match](https://github.com/kathyisawesome/wc-mnm-variable) as an alternative.
+
 # WooCommerce Mix and Match: Grouped Containers
 
 ### Quickstart
 
 This is a developmental repo. Clone this repo and run `npm install && npm run build`   
 OR    
-[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest/)    
+|[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest/)|
+|---|
+
 
 ### What's This?
 
