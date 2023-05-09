@@ -4,11 +4,11 @@
 
 This is a developmental repo. Clone this repo and run `npm install && npm run build`   
 OR    
-[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest/download/wc-mnm-grouped.zip)    
+[Download latest release](https://github.com/kathyisawesome/wc-mnm-grouped/releases/latest) 
 
 ### What's This?
 
-Mini-extension for that adds a "Grouped Mix and Match" [WooCommerce Mix and Match](https://woocommerce.com/products/woocommerce-mix-and-match-products ). This product type groups multiple WooCommerce Mix and Match products together to allow customers to choose from different size containers before making their selections.
+Mini-extension for that adds a "Grouped Mix and Match" [WooCommerce Mix and Match](https://woocommerce.com/products/woocommerce-mix-and-match-products). This product type groups multiple WooCommerce Mix and Match products together to allow customers to choose from different size containers before making their selections.
 
 It should have probably been called "Variable" Mix and Match as it is meant to actually approximate a variable mix and match product with the different mix and match products as "variations".
 
