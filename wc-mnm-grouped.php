@@ -27,7 +27,7 @@ define( 'WC_MNM_GROUPED_VERSION', '1.0.1' );
 function init() {
 
 	// Quietly quit if MNM is not active.
-	if ( ! function_exists( 'wc_mix_and_match' ) ) {
+	if ( ! function_exists( 'wc_mix_and_match' ) || version_compare( wc_mix_and_match()->version, '2.0.0' ) < 0 ) {
 		return false;
 	}
 
@@ -333,7 +333,12 @@ function print_styles() { ?>
  */
 function register_scripts() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-	wp_register_script( 'wc-mnm-grouped', get_plugin_url() . '/assets/js/frontend/wc-mnm-grouped' . $suffix . '.js', array( 'wc-add-to-cart-mnm', 'jquery-blockui' ), WC_MNM_GROUPED_VERSION, true );
+
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+	$script_path = 'assets/js/frontend/wc-mnm-grouped' . $suffix . '.js';
+
+	wp_register_script( 'wc-mnm-grouped', plugins_url( $script_path, __FILE__ ), array( 'wc-add-to-cart-mnm', 'jquery-blockui' ), WC_Mix_and_Match()->get_file_version( get_plugin_path() . '/' . $script_path, WC_MNM_GROUPED_VERSION ), true );
+
 }
 
 /**
