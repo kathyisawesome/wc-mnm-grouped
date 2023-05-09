@@ -339,6 +339,10 @@ function register_scripts() {
 
 	wp_register_script( 'wc-mnm-grouped', plugins_url( $script_path, __FILE__ ), array( 'wc-add-to-cart-mnm', 'jquery-blockui' ), WC_Mix_and_Match()->get_file_version( get_plugin_path() . '/' . $script_path, WC_MNM_GROUPED_VERSION ), true );
 
+	$l10n = array( 'wc_ajax_url' => \WC_AJAX::get_endpoint( '%%endpoint%%' ) );
+
+	wp_localize_script( 'wc-mnm-grouped', 'WC_MNM_GROUPED_PARAMS', $l10n );
+
 }
 
 /**
@@ -349,11 +353,6 @@ function load_scripts() {
 	wp_enqueue_script( 'jquery-blockui' );
 	wp_enqueue_script( 'wc-add-to-cart-mnm' );
 	wp_enqueue_script( 'wc-mnm-grouped' );
-
-	$l10n = array( 'wc_ajax_url' => \WC_AJAX::get_endpoint( '%%endpoint%%' ) );
-
-	wp_localize_script( 'wc-mnm-grouped', 'WC_MNM_GROUPED_PARAMS', $l10n );
-
 }
 
 
